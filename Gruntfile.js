@@ -363,7 +363,7 @@ module.exports = function (grunt) {
           archive: 'admin-ui.zip'
         },
         files: [
-          {src: ['dist/**'], dest: 'admin-ui/'}
+          {expand: true, cwd:'dist/', src: ['**'], dest: 'admin-ui'}
         ]
       }
     }
