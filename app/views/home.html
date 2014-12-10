@@ -1,3 +1,4 @@
+
 <my-alert ng-model="alert" ng-repeat="alert in alerts"></my-alert>
 
 <div class="well well-lg">
@@ -7,17 +8,17 @@
   <div>
     <!-- Add -->
     <div class="row">
-      <div class="col-lg-2">
+      <div class="col-sm-2">
         <div class="form-group">
           <input type="text" class="form-control" ng-model="addType" placeholder="Type">
         </div>
       </div>
-      <div class="col-lg-7">
+      <div class="col-sm-7">
         <div class="form-group">
           <input type="text" class="form-control" ng-model="addUrl" placeholder="Url">
         </div>
       </div>
-      <div class="col-lg-2">
+      <div class="col-sm-3">
         <div class="form-group">
           <button type="submit" class="btn btn-success" ng-click="addRepo()">Add</button>
         </div>
@@ -27,30 +28,27 @@
     <br />
     <!-- Manage -->
     <div class="row" ng-repeat="repo in repos">
-      <div class="col-lg-2">
+      <div class="col-sm-2">
         <div class="form-group">
           <input type="text" id="{{repo.id}}" class="form-control" placeholder="Type" ng-model="repo.type">
         </div>
       </div>
-      <div class="col-lg-7">
+      <div class="col-sm-7">
         <div class="form-group">
           <input type="text" id="{{repo.id}}" class="form-control" placeholder="Url" ng-model="repo.url">
         </div>
       </div>
-      <div class="col-lg-1">
+      <div class="col-sm-3">
         <div class="form-group">
-          <button type="submit" class="btn btn-default" ng-click="saveRepo(repo.id, repo.type, repo.url)">Save</button>
-        </div>
-      </div>
-      <div class="col-lg-1">
-        <div class="form-group">
-          <button type="submit" class="btn btn-danger" ng-click="deleteRepo(repo.id)">Delete</button>
+          <div class="btn-group" role="group" aria-label="manage repo">
+
+            <button type="submit" class="btn btn-default" role="group" ng-click="saveRepo(repo.id, repo.type, repo.url)">Save</button>
+            <button type="submit" class="btn btn-danger" role="group" ng-click="deleteRepo(repo.id)">Delete</button>
+          </div>
         </div>
       </div>
     </div>
 
-
   </div>
-
 
 </div>

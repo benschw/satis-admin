@@ -2,9 +2,9 @@
 console.log('loaded');
 /**
  * @ngdoc overview
- * @name satisAdminApp
+ * @name satisApp
  * @description
- * # satisAdminApp
+ * # satisApp
  *
  * Main module of the application.
  */
@@ -22,11 +22,11 @@ angular
   ])
   .run(['$rootScope', '$state', '$stateParams',
     function ($rootScope, $state, $stateParams) {
+      console.log('app');
       $rootScope.$state = $state;
       $rootScope.$stateParams = $stateParams;
   }])
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    console.log('app');
     // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
     $urlRouterProvider.otherwise('/');
 
@@ -47,3 +47,5 @@ angular
     $stateProvider.state(app);
 
   }]);
+
+
