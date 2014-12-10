@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('loaded');
 /**
  * @ngdoc overview
  * @name satisAdminApp
@@ -26,7 +26,7 @@ angular
       $rootScope.$stateParams = $stateParams;
   }])
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-
+    console.log('app');
     // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
     $urlRouterProvider.otherwise('/');
 
