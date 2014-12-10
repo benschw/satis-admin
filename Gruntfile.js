@@ -355,7 +355,19 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    compress: {
+      main: {
+        options: {
+          archive: 'admin-ui.zip'
+        },
+        files: [
+          {src: ['dist/**'], dest: 'admin-ui/'}
+        ]
+      }
     }
+
   });
 
 
@@ -408,5 +420,9 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('dist', [
+    'compress'
   ]);
 };
