@@ -2,6 +2,6 @@
 
 
 # satis-admin
+[docs / install](http://txt.fliglio.com/satis-go/)
 
-
-[download latest](https://drone.io/github.com/benschw/satis-admin/files/admin-ui.zip)
+[download latest](https://drone.io/github.com/benschw/satis-admin/files/admin-ui.tar.gz)
