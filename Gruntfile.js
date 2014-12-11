@@ -357,7 +357,8 @@ module.exports = function (grunt) {
     compress: {
       main: {
         options: {
-          archive: 'admin-ui.zip'
+          mode: 'tgz',
+          archive: 'admin-ui.tar.gz'
         },
         files: [
           {expand: true, cwd:'dist/', src: ['**'], dest: 'admin-ui'}
