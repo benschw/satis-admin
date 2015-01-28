@@ -61,11 +61,13 @@ angular
     };
 
     $scope.deleteRepo = function(id) {
-      Repo.delete({id: id}, function() {
-        $scope.repos = Repos.query(function() {
-          $scope.hideSave = $scope.repos.length === 0;
+      if (confirm("Are you sure you want to delete this repo?")) {
+        Repo.delete({id: id}, function() {
+          $scope.repos = Repos.query(function() {
+            $scope.hideSave = $scope.repos.length === 0;
+          });
         });
-      });
+      }
     };
 
     $scope.saveRepo = function(id, type, url) {
